@@ -10,8 +10,3 @@ jobs:
           command: |
             echo $Name
             
-workflows:
-  version: 1
-  call_env:
-    jobs:
-      - Echo_var
