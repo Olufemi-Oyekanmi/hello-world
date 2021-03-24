@@ -1,12 +1,17 @@
-version: 1
+version: 2.1
+
+workflows:
+  test-env-vars:
+    jobs:
+      - build
+
 jobs:
-  Echo_var:
+  build:
     docker:
-      - image: circleci/node:13.8.0
+      - image: cimg/base:2020.01
     steps:
       - checkout
       - run:
-          name: "echo an env var"
+          name: "echo an env var that is part of our project"
           command: |
             echo $Name
-            
