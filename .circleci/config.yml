@@ -9,8 +9,7 @@ jobs:
           name: "echo an env var"
           command: |
             echo $Name
-
-workflow:
+workflows:
   version: 1
   call_env:
     jobs:
